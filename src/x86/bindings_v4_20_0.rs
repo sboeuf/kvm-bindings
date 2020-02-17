@@ -2234,6 +2234,7 @@ fn bindgen_test_layout_kvm_msr_list() {
 }
 #[repr(C)]
 #[derive(Debug, Default, Copy, Clone, PartialEq)]
+#[cfg_attr(feature = "with-serde", derive(Deserialize, Serialize))]
 pub struct kvm_cpuid_entry {
     pub function: __u32,
     pub eax: __u32,
@@ -2367,6 +2368,7 @@ fn bindgen_test_layout_kvm_cpuid() {
 }
 #[repr(C)]
 #[derive(Debug, Default, Copy, Clone, PartialEq)]
+#[cfg_attr(feature = "with-serde", derive(Deserialize, Serialize))]
 pub struct kvm_cpuid_entry2 {
     pub function: __u32,
     pub index: __u32,
