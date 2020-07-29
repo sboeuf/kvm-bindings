@@ -3,6 +3,8 @@
 
 #[cfg(feature = "fam-wrappers")]
 mod fam_wrappers;
+#[cfg(feature = "with-serde")]
+use serde_derive::{Deserialize, Serialize};
 
 // Export 4.14 bindings when the feature kvm-v4_20_0 is not specified.
 #[cfg(all(feature = "kvm-v4_14_0", not(feature = "kvm-v4_20_0")))]
